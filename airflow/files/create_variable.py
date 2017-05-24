@@ -30,7 +30,7 @@ var = get_variable(key)
 
 if update and var:
     if var:
-        var._val = value
+        var.set_val(value)
         session.commit()
     else:
         create_variable(key, value)
