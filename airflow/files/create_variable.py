@@ -9,7 +9,7 @@ session = settings.Session()
 
 key = sys.argv[1]
 value = sys.argv[2]
-create = eval(sys.argv[3])
+update = eval(sys.argv[3])
 
 
 def get_variable(key):
@@ -28,13 +28,13 @@ def create_variable(key, value):
 
 var = get_variable(key)
 
-if create and not var:
-    create_variable(key, value)
-else:
+if update and var:
     if var:
         var.value = value
         session.commit()
     else:
         create_variable(key, value)
+else:
+    create_variable(key, value)
 
 exit()
