@@ -56,6 +56,7 @@ airflow_dag_source_{{ dag_name }}:
   - name: {{ dag_source.address }}
   - target: /srv/airflow/dags/{{ dag_name }}
   - rev: {{ dag_source.get('rev', dag_source.get('revision', 'master')) }}
+  - force_fetch: True
   - force_reset: True
   - require:
     - file: airflow_dirs
@@ -68,6 +69,7 @@ airflow_plugin_source_{{ plugin_name }}:
   - target: /srv/airflow/plugins/{{ plugin_name }}
   - rev: {{ plugin_source.get('rev', plugin_source.get('revision', 'master')) }}
   - force_reset: True
+  - force_fetch: True
   - require:
     - file: airflow_dirs
 
