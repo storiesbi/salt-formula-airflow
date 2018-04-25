@@ -15,8 +15,8 @@ flask-bcrypt>=0.7.1
 slackclient>=1.0.0
 # GCP
 httplib2
-google-api-python-client>=1.5.0, <1.6.0
-oauth2client>=2.0.2, <2.1.0
+google-api-python-client>=1.5.0,<1.6.0
+oauth2client>=2.0.2,<2.1.0
 PyOpenSSL
 google-cloud-dataflow
 pandas-gb
