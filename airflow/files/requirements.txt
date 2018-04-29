@@ -1,8 +1,7 @@
 celery==4.1.0
 
-boto>=2.36.0
+boto3
 filechunkio>=1.6
-psycopg2>=2.7.1
 cryptography>=0.9.3
 bcrypt>=2.0.0
 flask-bcrypt>=0.7.1
@@ -15,4 +14,3 @@ pandas-gbq
 
 lockfile==0.12.2
 redis
-google_compute_engine
